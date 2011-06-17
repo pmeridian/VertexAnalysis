@@ -23,12 +23,12 @@ public:
   double vtxdZ(const PhotonInfo & pho);
 
  private:
-  float sigmaPix_;
-  float sigmaTib_;
-  float sigmaTob_;
-  float sigmaFwd1_;
-  float sigmaFwd2_;
-  float sigmaFwd3_;
+  float & sigmaPix_;
+  float & sigmaTib_;
+  float & sigmaTob_;
+  float & sigmaFwd1_;
+  float & sigmaFwd2_;
+  float & sigmaFwd3_;
 
 };
 

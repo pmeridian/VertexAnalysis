@@ -7,7 +7,6 @@
 
 #include <algorithm>
 #include <numeric>
-#include <iostream>
 #include <iterator>
 
 #include <assert.h>
@@ -31,6 +30,8 @@ HggVertexFromConversions::HggVertexFromConversions(VertexAlgoParameters &ap):
 
 double HggVertexFromConversions::vtxdZ(const PhotonInfo & pho)
 {
+
+
   // attribute the error depending on the tracker region
   double dz=-99999;
 
@@ -44,6 +45,8 @@ double HggVertexFromConversions::vtxdZ(const PhotonInfo & pho)
     }
 
   } else { // endcap
+
+
     if ( fabs(pho.conversionVertex().Z() ) <=50 ) {
       dz=sigmaFwd1_;
     } else if ( fabs(pho.conversionVertex().Z() ) > 50 && fabs(pho.conversionVertex().Z()) <= 100 ) {
@@ -52,7 +55,9 @@ double HggVertexFromConversions::vtxdZ(const PhotonInfo & pho)
       dz=sigmaFwd3_;
     }
   }
+
   return dz;
+
 }
 
 
