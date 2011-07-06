@@ -25,16 +25,16 @@ public:
 	     float convVtxChi2Prob,
 	     float EoP
 	     );
-	
-	int id() const { return id_; }  
-	const TVector3 & beamSpot() const { return beamSpot_; }
-	const TVector3 & conversionVertex() const { return conversionVertex_; }
-	const TVector3 & caloPosition() const { return caloPosition_; }
-	const int iDet() const {return iDet_;}
-	const float      energy()       const { return energy_; }
-	TLorentzVector p4(float vtxx, float vtxy, float vtxz) const;
-	bool isAConversion();
-	
+  
+  int id() const { return id_; }  
+  const TVector3 & beamSpot() const { return beamSpot_; }
+  const TVector3 & conversionVertex() const { return conversionVertex_; }
+  const TVector3 & caloPosition() const { return caloPosition_; }
+  const int iDet() const {return iDet_;}
+  const float      energy()       const { return energy_; }
+  TLorentzVector p4(float vtxx, float vtxy, float vtxz) const;
+  bool isAConversion() const;
+  
 protected:
 	int id_;
 	TVector3 caloPosition_;
